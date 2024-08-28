@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Hotel Listings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Your custom CSS file -->
+    <style>
+        body {
+            background: url('desgine/lalala.jpg') no-repeat center center fixed;
+            background-size: cover; /* Ensure the image covers the entire background */
+            font-family: Arial, sans-serif;
+            color: #000000; /* Dark gray color for text */
+        }
+
+        .navbar {
+            background-color: #000000; /* Brown color for navbar */
+            margin-bottom: 20px; /* Add some space below the navbar */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ffffff !important; /* White text color for navbar */
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            color: #ffd700 !important; /* Gold color for active link */
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* White background for cards */
+            transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+            display: block; /* Ensure the card takes up the full anchor area */
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+            border-radius: 8px; /* Rounded corners for the cards */
+            overflow: hidden; /* Ensure the image stays within the card bounds */
+            width: 100%; /* Ensure all cards have the same width */
+            height: 400px; /* Set a fixed height for the cards */
+            max-width: 300px; /* Set a maximum width for the cards */
+            margin: 0 auto; /* Center the cards horizontally */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slight zoom in effect */
+        }
+
+        .card-body {
+            padding: 1rem; /* Decreased padding for smaller content */
+            display: flex; /* Flexbox for layout */
+            flex-direction: column; /* Column layout */
+            justify-content: space-between; /* Space between items */
+        }
+
+        .card-title {
+            color: #007bff; /* Blue color for hotel names */
+            font-size: 1.25rem; /* Adjusted font size */
+            margin-bottom: 0.5rem; /* Adjusted margin */
+        }
+
+        .card-text {
+            color: #000000; /* Dark gray color for text */
+            font-size: 1rem; /* Adjusted font size */
+        }
+
+        .btn-primary {
+            align-self: flex-start; /* Align button to the start (top) */
+        }
+
+        footer {
+            background-color: #4e3629; /* Brown color for footer */
+            color: white; /* White text color for footer */
+            padding: 1rem 0; /* Padding for footer */
+            text-align: center; /* Center align text */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px; /* Add some space above the footer */
+        }
+
+        footer p {
+            margin: 0; /* Remove default margin from paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Mini Hotels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LOGIN.php">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.php">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <!-- Add more nav items as needed -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="text-center mb-4">
+            <h1>Welcome to Mini Hotels</h1>
+            <p class="lead">Explore our selection of hotels</p>
+        </div>
+
+        <div class="row">
+            <!-- Card for The Ritz-Carlton -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/dada.jpg" class="card-img-top" alt="The Ritz-Carlton">
+                    <div class="card-body">
+                        <a href="hotela.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">The Ritz-Carlton</h5>
+                        <p class="card-text">$500 per night</p>
+                        <p class="card-text">Luxury hotel with upscale amenities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card for Four Seasons Hotel -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/leo.jpeg" class="card-img-top" alt="Four Seasons Hotel">
+                    <div class="card-body">
+                        <a href="hotelB.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Four Seasons Hotel</h5>
+                        <p class="card-text">$450 per night</p>
+                        <p class="card-text">Five-star accommodation with exceptional service.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card for Hilton Garden Inn -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/nono.jpg" class="card-img-top" alt="Hilton Garden Inn">
+                    <div class="card-body">
+                        <a href="hotelC.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Hilton Garden Inn</h5>
+                        <p class="card-text">$150 per night</p>
+                        <p class="card-text">Comfortable rooms and convenient amenities.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/kada.jpeg" class="card-img-top" alt="Marriott Marquis">
+                    <div class="card-body">
+                        <a href="hotelD.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Marriott Marquis</h5>
+                        <p class="card-text">$200 per night</p>
+                        <p class="card-text">Modern rooms with stunning city views.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/imaes.jpeg" class="card-img-top" alt="The Langham">
+                    <div class="card-body">
+                        <a href="hotelE.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">The Langham</h5>
+                        <p class="card-text">$350 per night</p>
+                        <p class="card-text">Elegant hotel with a renowned spa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/haha.jpeg" class="card-img-top" alt="Hyatt Regency">
+                    <div class="card-body">
+                        <a href="hotelF.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Hyatt Regency</h5>
+                        <p class="card-text">Stylish rooms with a focus on comfort.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waldorf Astoria -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/messi.jpeg" class="card-img-top" alt="Waldorf Astoria">
+                    <div class="card-body">
+                        <a href="hotelG.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Waldorf Astoria</h5>
+                        <p class="card-text">$600 per night</p>
+                        <p class="card-text">Iconic hotel known for its luxury and history.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mandarin Oriental -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/images (1).jpeg" class="card-img-top" alt="Mandarin Oriental">
+                    <div class="card-body">
+                        <a href="hotelH.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Mandarin Oriental</h5>
+                        <p class="card-text">$550 per night</p>
+                        <p class="card-text">Sophisticated hotel with world-class dining.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sheraton -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/vava.jpeg" class="card-img-top" alt="Sheraton">
+                    <div class="card-body">
+                        <a href="hotelI.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Sheraton</h5>
+                        <p class="card-text">$130 per night</p>
+                        <p class="card-text">Well-equipped rooms and great location.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- InterContinental -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/opop.jpeg" class="card-img-top" alt="InterContinental">
+                    <div class="card-body">
+                        <a href="hotelJ.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">InterContinental</h5>
+                        <p class="card-text">$220 per night</p>
+                        <p class="card-text">Luxury hotel with a focus on elegance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Holiday Inn -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/tata.jpeg" class="card-img-top" alt="Holiday Inn">
+                    <div class="card-body">
+                        <a href="hotelK.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Holiday Inn</h5>
+                        <p class="card-text">$120 per night</p>
+                        <p class="card-text">Affordable and comfortable accommodation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radisson Blu -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/titi.jpeg" class="card-img-top" alt="Radisson Blu">
+                    <div class="card-body">
+                        <a href="hotelL.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Radisson Blu</h5>
+                        <p class="card-text">$170 per night</p>
+                        <p class="card-text">Contemporary hotel with convenient amenities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raffles Hotel -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="desgine/toto.jpeg" class="card-img-top" alt="Raffles Hotel">
+                    <div class="card-body">
+                        <a href="hotelM.html" class="btn btn-primary mb-3">Book Now</a>
+                        <h5 class="card-title">Raffles Hotel</h5>
+                        <p class="card-text">$650 per night</p>
+                        <p class="card-text">Historical hotel with luxurious suites.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ritz-Carlton Reserve -->
+            <!-- More static hotel cards here... -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mini Hotels. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
